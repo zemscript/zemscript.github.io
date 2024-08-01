@@ -1,22 +1,30 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import MyNavbar from "./components/UI/Navbar/MyNavbar";
-import AppRouter from "./router/AppRouter";
-import MyFooter from "./components/UI/Footer/MyFooter";
 import styled from "styled-components";
+import Header from "./components/UI/Header/Header";
+import Footer from "./components/UI/Footer/Footer";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-    <Background>
-      <MyNavbar></MyNavbar>
-      <AppRouter></AppRouter>
-      <MyFooter></MyFooter>
-    </Background>
+    <MainSection>
+      <Header></Header>
+      <Content>
+        <AppRouter></AppRouter>
+      </Content>
+      <Footer></Footer>
+    </MainSection>
   );
 }
 
 export default App;
 
-const Background = styled.div`
-  background-color: #313338
-`
+const MainSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+const Content = styled.main`
+  flex: 1;
+`;

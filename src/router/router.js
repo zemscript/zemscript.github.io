@@ -1,7 +1,7 @@
-import MyMain from "../pages/MyMain";
-import MyProject from "../pages/MyProject";
+import Main from "../pages/Main";
+import Projects from "../pages/Projects";
 
 export const publicRoutes = [
-  { path: "/", component: MyMain },
-  { path: "/project", component: MyProject },
+  { path: "/", component: Main },
+  { path: "/projects", component: Projects },
 ];
