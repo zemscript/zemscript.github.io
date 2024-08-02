@@ -5,6 +5,7 @@ export const Hdr = styled.header`
   background: #333333;
   color: #fff;
   padding: 1rem;
+  margin-bottom: 5rem;
 `;
 
 export const Nav = styled.nav`

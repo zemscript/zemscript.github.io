@@ -13,9 +13,6 @@ function Header() {
           <ListItem>
             <ItemLink href="/projects">Проекты</ItemLink>
           </ListItem>
-          <ListItem>
-            <ItemLink href="https://github.com/zemscript">GitHub</ItemLink>
-          </ListItem>
         </NavList>
       </Nav>
     </Hdr>
