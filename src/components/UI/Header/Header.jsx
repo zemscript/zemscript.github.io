@@ -10,9 +10,6 @@ function Header() {
           <ListItem>
             <ItemLink href="/">Главная</ItemLink>
           </ListItem>
-          <ListItem>
-            <ItemLink href="/projects">Проекты</ItemLink>
-          </ListItem>
         </NavList>
       </Nav>
     </Hdr>

@@ -9,16 +9,17 @@ const ProjectList = ({ items }) => {
   const toggleShowAll = () => {
     setShowAll(!showAll);
   };
-  const itemsToShow = showAll ? items : items.slice(0, 4);
+  const itemsToShow = showAll ? items : items.slice(0, 6);
 
   return (
-    <div>
+    <>
       <List>
         {itemsToShow.map((item) => (
           <ListItem key={item.key}>
             <Card>
               <CardLink href={item.href}>
                 <CardWrapper>
+                  {item.img && <CardImg src={item.img} alt={item.title} />}
                   <CardTitle>{item.title}</CardTitle>
                   {item.href && <CardArrow src={Arrow} alt="Стрелочка" />}
                 </CardWrapper>
@@ -29,11 +30,11 @@ const ProjectList = ({ items }) => {
         ))}
       </List>
       <ShowMoreButtonWrapper>
-        {items.length > 4 && (
+        {items.length > 6 && (
           <ShowMoreButton onClick={toggleShowAll}>{showAll ? "Скрыть" : "Показать всё"}</ShowMoreButton>
         )}
       </ShowMoreButtonWrapper>
-    </div>
+    </>
   );
 };
 
@@ -42,6 +43,7 @@ ProjectList.propTypes = {
     PropTypes.shape({
       key: PropTypes.string.isRequired,
       href: PropTypes.string,
+      img: PropTypes.string,
       title: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
     }),
@@ -79,22 +81,27 @@ const ShowMoreButton = styled.button`
 `;
 
 const Card = styled.div`
-  border: 1px solid #ccc;
+  border: 0.1rem solid #ccc;
   border-radius: 8px;
-  padding: 16px;
-  margin: 16px 0;
-  width: 70rem;
+  padding: 1.6rem;
+  margin: 1.6rem 0;
+  width: 65rem;
   background: var(--colorBackground);
 `;
 
 const CardWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   margin-bottom: 1rem;
 `;
 
-const CardArrow = styled.img``;
+const CardArrow = styled.img`
+  margin-left: 1rem;
+`;
+
+const CardImg = styled.img`
+  margin-right: 0.5rem;
+`;
 
 const CardTitle = styled.h2`
   font-family: var(--fontTitle);

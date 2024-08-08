@@ -23,7 +23,6 @@ const DropdownContent = styled.div`
   position: absolute;
   background-color: #f9f9f9;
   min-width: 40rem;
-  /* max-width: 40rem; */
   box-shadow: 0rem 0.8rem 1.6rem 0rem rgba(0, 0, 0, 0.2);
   z-index: 1;
 `;
@@ -34,10 +33,6 @@ export const DropdownItem = styled.a`
   text-decoration: none;
   display: block;
   font-size: 1.4rem;
-
-  /* &:hover {
-    background-color: #f1f1f1;
-  } */
 `;
 
 function Dropdown({ children, buttonText }) {
