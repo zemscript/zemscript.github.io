@@ -62,6 +62,10 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   margin: 0.75rem 0;
+
+  @media (max-width: 767px) {
+    padding: 0rem 1rem;
+  }
 `;
 
 const ShowMoreButtonWrapper = styled.div`
@@ -87,6 +91,10 @@ const Card = styled.div`
   margin: 1.6rem 0;
   width: 65rem;
   background: var(--colorBackground);
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 const CardWrapper = styled.div`

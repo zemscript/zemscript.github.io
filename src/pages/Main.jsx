@@ -11,7 +11,7 @@ import {
 // import DropdownShow from "../../components/UI/Dropdown/DropdownShow";
 import Lock from "../assets/img/lock.svg";
 import Book from "../assets/img/book.svg";
-import plink from "../assets/video/plink.webp";
+// import plink from "../assets/video/plink.webp";
 
 function Projects() {
   const items = [
@@ -55,7 +55,7 @@ function Projects() {
           <DropdownShow items={dropItems}></DropdownShow>
         </List> */}
         <ProjectList items={items}></ProjectList>
-        <img src={plink}></img>
+        {/* <img src={plink}></img> */}
       </Wrapper>
     </Section>
   );
